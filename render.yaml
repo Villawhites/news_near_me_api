@@ -1,0 +1,16 @@
+# Build commands
+build:
+  commands:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+
+# Start command
+start: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+
+# Environment
+env:
+  python:
+    version: "3.11"
+
+# Health check
+healthCheckPath: /
