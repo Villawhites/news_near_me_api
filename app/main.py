@@ -85,15 +85,15 @@ def custom_openapi():
         "altText": "News Near Me Logo"
     }
     
-    # Agregar servidores
+    # Agregar servidores - producción primero para Swagger
     openapi_schema["servers"] = [
         {
-            "url": "http://localhost:8000",
-            "description": "Servidor de desarrollo"
+            "url": "/",
+            "description": "Servidor actual (auto-detectado)"
         },
         {
-            "url": "https://api.tu-dominio.com",
-            "description": "Servidor de producción"
+            "url": "http://localhost:8000",
+            "description": "Servidor de desarrollo local"
         }
     ]
     
